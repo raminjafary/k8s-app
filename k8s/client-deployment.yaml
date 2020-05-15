@@ -3,13 +3,13 @@ kind: Deployment
 metadata:
   name: client-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       component: web
   template:
     metadata:
-      labels:
+      labels: 
         component: web
     spec:
       containers:
@@ -17,3 +17,5 @@ spec:
           image: dvdbazi/multi-client
           ports:
             - containerPort: 3000
+
+
